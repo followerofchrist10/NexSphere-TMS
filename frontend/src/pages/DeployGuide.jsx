@@ -193,7 +193,7 @@ export default function DeployGuide() {
             </div>
           </div>
           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span>Entrypoint: <code className="text-slate-800 font-mono">server.ts</code></span>
+            <span>Entrypoint: <code className="text-slate-800 font-mono">server.js</code></span>
             <button 
               onClick={() => copyText('docker build -t nexsphere-edu . && docker run -p 3000:3000 nexsphere-edu', 'docker')}
               className="text-xs font-semibold text-slate-800 hover:text-emerald-700 underline flex items-center gap-1"
@@ -217,13 +217,13 @@ export default function DeployGuide() {
               git clone &lt;your-repo-url&gt; && cd applet<br/>
               npm install --legacy-peer-deps<br/>
               npm run build<br/>
-              pm2 start server.ts --name &quot;nexsphere&quot; --interpreter tsx
+              pm2 start server.js --name &quot;nexsphere&quot;
             </div>
           </div>
           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
             <span>Daemon: <code className="text-slate-800 font-mono">pm2</code></span>
             <button 
-              onClick={() => copyText('npm install --legacy-peer-deps && npm run build && pm2 start server.ts --name "nexsphere" --interpreter tsx', 'pm2')}
+              onClick={() => copyText('npm install --legacy-peer-deps && npm run build && pm2 start server.js --name "nexsphere"', 'pm2')}
               className="text-xs font-semibold text-slate-800 hover:text-emerald-700 underline flex items-center gap-1"
             >
               {copiedKey === 'pm2' ? 'Copied!' : 'Copy Commands'}
@@ -239,7 +239,7 @@ export default function DeployGuide() {
           <div>
             <p className="font-bold">Production Server Ready</p>
             <p className="text-[11px] text-emerald-800">
-              <code className="font-mono font-bold">server.ts</code> configured to serve optimized frontend assets and handle all API endpoints with zero-trust role isolation.
+              <code className="font-mono font-bold">server.js</code> native Node runtime configured to serve optimized frontend assets and handle all API endpoints with zero-trust role isolation.
             </p>
           </div>
         </div>

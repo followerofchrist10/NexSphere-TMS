@@ -1,6 +1,0 @@
-{
-  "summary": "Comprehensive implementation plan to strictly isolate student, faculty, and administrator roles, remove all demo role shortcuts and switcher bars, enforce strict email/password credentials, wipe all test data (certificates, attendances, grades, submissions, dues), and configure dedicated admin workflows for course uploads, attendance auditing, and dues setup.",
-  "updatedAt": "2026-11-06T19:23:11.325256133Z",
-  "requestFeedback": true,
-  "userFacing": true
-}

@@ -1,0 +1,6 @@
+{
+  "name": "NexSphere TMS",
+  "description": "Enterprise Technical Training Management System with course allocation, lecture planning, session attendance tracking, and grade distribution management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

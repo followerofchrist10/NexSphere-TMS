@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Shield, GraduationCap, UserCheck, Lock, KeyRound, CheckCircle2 } from 'lucide-react';
+import Logo from '../components/Logo';
 import { useAuth } from '../lib/auth';
 import { Alert, Btn } from '../components/ui';
 
@@ -14,12 +15,9 @@ function Shell({ title, children, footer }) {
     <div className="auth-shell flex min-h-screen items-center justify-center px-4 py-10 bg-slate-100">
       <div className={`auth-content w-full max-w-lg ${transition}`}>
         <div className="text-center mb-6">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-emerald-400 font-black text-xl shadow-md">
-            N
+          <div className="flex justify-center mb-3">
+            <Logo className="h-16 w-auto" />
           </div>
-          <p className="mt-3 text-xs font-bold uppercase tracking-wider text-slate-500">
-            NEXSPHERE TMS · TECHNICAL TRAINING PORTAL
-          </p>
           <h1 className="mt-1 text-2xl font-black text-slate-900">{title}</h1>
           <p className="mt-1 text-xs text-slate-600">
             Zero-Trust Role-Isolated Portal: Administrator, Faculty, and Student personas.
@@ -103,7 +101,7 @@ export function Login() {
             type="password"
             required
             autoComplete="current-password"
-            placeholder="••••••••••••"
+            placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className={inputStyle}

@@ -15,6 +15,7 @@ import CodeSubmissions from './pages/CodeSubmissions';
 import Reports from './pages/Reports';
 import Notifications from './pages/Notifications';
 import MyProfile from './pages/MyProfile';
+import DeployGuide from './pages/DeployGuide';
 import { Batches, Assets, Students, Instructors, Users, AuditLog } from './pages/Resources';
 
 const ADMIN_ONLY = ['admin'];
@@ -52,6 +53,7 @@ export default function App() {
           <Route element={<ProtectedRoute roles={ADMIN_ONLY} />}>
             <Route path="users" element={<Users />} />
             <Route path="audit" element={<AuditLog />} />
+            <Route path="deploy" element={<DeployGuide />} />
           </Route>
 
           {/* Batches: Admin, Staff, and Instructors */}

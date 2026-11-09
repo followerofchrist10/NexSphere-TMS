@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(20,15)">
+    <circle cx="65" cy="65" r="55"
+            fill="none" stroke="url(#grad)" stroke-width="5"/>
+
+    <ellipse cx="65" cy="65" rx="25" ry="55"
+             fill="none" stroke="url(#grad)" stroke-width="3"
+             transform="rotate(45 65 65)"/>
+
+    <ellipse cx="65" cy="65" rx="25" ry="55"
+             fill="none" stroke="url(#grad)" stroke-width="3"
+             transform="rotate(-45 65 65)"/>
+
+    <path d="M35 65 H95 M65 35 V95"
+          stroke="url(#grad)" stroke-width="3"
+          stroke-linecap="round"/>
+
+    <circle cx="65" cy="65" r="9" fill="#6366F1"/>
+    <circle cx="65" cy="10" r="5" fill="#38BDF8"/>
+    <circle cx="120" cy="65" r="5" fill="#6366F1"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="160" y="82"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="47" font-weight="800"
+        letter-spacing="1.5" fill="#172554">
+    NEXSPHERE
+  </text>
+
+  <text x="163" y="116"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="19" font-weight="600"
+        letter-spacing="9" fill="#6366F1">
+    EDU
+  </text>
+</svg>

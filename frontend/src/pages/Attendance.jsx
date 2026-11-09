@@ -130,10 +130,10 @@ function TraineeAttendanceView() {
                         : 'bg-rose-500 text-white shadow-lg shadow-rose-500/20'
                     }`}
                   >
-                    <span>●</span>
+                    <span className="h-2 w-2 rounded-full bg-current" />
                     <span>
                       {overall.status === 'safe'
-                        ? 'Certification Eligible (Safe ≥ 75%)'
+                        ? 'Certification Eligible (Safe >= 75%)'
                         : overall.status === 'warning'
                         ? 'Borderline Warning (65% - 74%)'
                         : 'Attendance Defaulter (< 65%)'}

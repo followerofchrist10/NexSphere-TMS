@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { Shield, GraduationCap, UserCheck, Menu, LogOut, CheckCircle2 } from 'lucide-react';
+import Logo from './Logo';
 import { useAuth } from '../lib/auth';
 import api from '../lib/api';
 import { useRealtime } from '../lib/realtime';
@@ -16,6 +17,7 @@ const NAV = {
     ['/instructors', 'Instructors'],
     ['/users', 'Users & Roles'],
     ['/audit', 'Audit Logs'],
+    ['/deploy', 'Production Deploy'],
   ],
   staff: [
     ['/', 'Dashboard'],
@@ -123,21 +125,8 @@ export default function Layout() {
     <div className="app-shell min-h-screen md:flex bg-slate-50">
       <aside className="app-sidebar hidden w-64 shrink-0 border-r border-slate-200 bg-white p-4 md:flex md:flex-col md:justify-between">
         <div>
-          <div className="app-brand flex items-center gap-3 pb-4 mb-3 border-b border-slate-100">
-            <span
-              className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 font-black text-emerald-400 text-lg shadow-sm"
-              aria-hidden="true"
-            >
-              N
-            </span>
-            <div>
-              <p className="font-extrabold text-sm tracking-tight text-slate-900">
-                NEXSPHERE<span className="text-emerald-600 font-mono text-xs ml-1">TMS</span>
-              </p>
-              <p className="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">
-                Technical Training System
-              </p>
-            </div>
+          <div className="app-brand flex items-center pb-4 mb-3 border-b border-white/10">
+            <Logo inverted className="h-10 w-auto" />
           </div>
 
           <div className="mb-4">
@@ -203,16 +192,8 @@ export default function Layout() {
           <div className="fixed inset-0 z-40 md:hidden" role="dialog" aria-modal="true">
             <div className="absolute inset-0 bg-slate-900/50" onClick={() => setOpen(false)} />
             <div className="app-mobile-nav absolute inset-y-0 left-0 w-64 bg-white p-4 shadow-xl">
-              <div className="app-brand flex items-center gap-3 pb-4 mb-3 border-b border-slate-100">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 font-black text-emerald-400 text-lg">
-                  N
-                </span>
-                <div>
-                  <p className="font-extrabold text-sm text-slate-900">
-                    NEXSPHERE<span className="text-emerald-600 text-xs ml-1">TMS</span>
-                  </p>
-                  <p className="text-[10px] text-slate-400">Technical Training System</p>
-                </div>
+              <div className="app-brand flex items-center pb-4 mb-3 border-b border-white/10">
+                <Logo inverted className="h-9 w-auto" />
               </div>
               <div className="mb-4">
                 {roleBadge()}
